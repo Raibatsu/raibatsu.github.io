@@ -6,7 +6,7 @@
     <title>Unity WebGL Player | Resume</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: url('Build/WebGL.jpg.br') center / cover"></canvas>
+    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: url('Build/WebGL.jpg.unityweb') center / cover"></canvas>
     <script src="Build/WebGL.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -25,9 +25,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/WebGL.data.br",
-        frameworkUrl: "Build/WebGL.framework.js.br",
-        codeUrl: "Build/WebGL.wasm.br",
+        dataUrl: "Build/WebGL.data.unityweb",
+        frameworkUrl: "Build/WebGL.framework.js.unityweb",
+        codeUrl: "Build/WebGL.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Raibatsu Co.",
         productName: "Resume",
