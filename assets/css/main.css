@@ -15,8 +15,7 @@
     --  08. Content Area --> Work
     --  09. Content Area --> Contact
     --  10. Content Area --> Footer
- 
- 
+    -- 11. Unity Area
  ******************************************************************/
 
 
@@ -861,7 +860,7 @@ a:hover
 #contact #contact-form input::placeholder,
 #contact #contact-form textarea::placeholder
 {
-    color: #fff;
+    color: #fff; /* this is email*/ 
 }
 
 #contact #contact-form input.error,
