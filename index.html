@@ -48,7 +48,7 @@
         <div class="image-container">
             
             <div id="unity-container" class="unity-desktop">
-                <canvas id="unity-canvas" width=window.innerWidth height=window.innerHeight style="padding-left: 5%; width: 55vw; height: 101vh;"></canvas>
+                <canvas id="unity-canvas" width=window.innerWidth height=window.innerHeight style="width: 50vw; height: 101vh;"></canvas>
             <div id="unity-custom-loading-screen">
                 
                 <div id="custom-logo", class="rotate"></div>
@@ -73,16 +73,20 @@
               // Modify or remove this function to customize the visually presented
               // way that non-critical warnings and error messages are presented to the
               // user.
-              function unityShowBanner(msg, type) {
+              function unityShowBanner(msg, image, type) {
                 function updateBannerVisibility() {
                   warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
                 }
                 var div = document.createElement('div');
-                div.innerHTML = msg;
+                    div.innerHTML = msg;
+                    img = document.createElement('img');
+                    img.src = image;
+
                 warningBanner.appendChild(div);
-                if (type == 'error') div.style = 'background: red; padding: 10px;';
+                document.getElementById("unity-canvas").replaceChild(img);
+                if (type == 'error') div.style = 'background: red; padding: 10%;';
                 else {
-                  if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+                  if (type == 'warning') div.style = 'background: yellow; padding: 10%;';
                   setTimeout(function() {
                     warningBanner.removeChild(div);
                     updateBannerVisibility();
@@ -103,36 +107,16 @@
                 productVersion: "1.0",
               };
         
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        
-        // Mobile device style: fill the whole browser client area with the game canvas:
-       /* var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
 
-        var canvas = document.querySelector("#unity-canvas");
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-        canvas.style.position = "fixed";
-
-        document.body.style.textAlign = "left";
-        */
-        
-      }
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-       /* container.className = "unity-mobile";
+        container.className = "unity-mobile";
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
+        unityShowBanner('WebGL builds are not supported on mobile devices. <br> Please scroll down to see a static resume instead.', "./TemplateData/webgl-logo.png");
+        loadingScreen.style.display = "none";
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px"; */
-      }
-else{
       loadingScreen.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
