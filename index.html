@@ -9,7 +9,7 @@
                     padding-right: 5%;
             }
     </style>
-       
+       <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         <!-- META -->
         <meta charset="utf-8">
         <meta name="robots" content="noodp">
@@ -53,7 +53,8 @@
         <div class="image-container">
             
             <div id="unity-container" class="unity-desktop">
-                <canvas id="unity-canvas" width=window.innerWidth height=window.innerHeight style="width: 50vw; height: 101vh;"></canvas>
+                <canvas id="unity-canvas" width=window.innerWidth height=window.innerHeight style="width: 48vw; height: 99vh; border-radius: 3%; background-color: white;
+                        border: 2px solid #000; overflow: hidden;"></canvas>
             <div id="unity-custom-loading-screen">
                 
                 <div id="custom-logo", class="rotate"></div>
@@ -133,6 +134,7 @@
           unitySetLoaderProgressTo(progress);
         }).then((unityInstance) => {
           loadingScreen.style.display = "none";
+          
          /* fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };*/
@@ -199,6 +201,7 @@
                         <div class="animation-container animation-fade-down" data-animation-delay="0">
                         
                             <h1>I’m Haider Zahoor,</h1>
+                            <h4>A Unity Game Developer</h4>
                         
                         </div>
                         <!-- /ANIMATION CONTAINER -->
@@ -207,7 +210,7 @@
                         <!-- ANIMATION CONTAINER -->
                         <div class="animation-container animation-fade-left" data-animation-delay="300">
                            
-                            <p class="subline">And welcome to my resume! You may want to wait a little while, it takes a while for my resume game to pop up!</p>
+                            <p class="subline">And welcome to my resume! I have been working on all sorts of platforms for Unity and would absolutely love to make fancy games!</p>
                             
                         </div>
                         <!-- /ANIMATION CONTAINER -->
@@ -216,7 +219,7 @@
                         <!-- ANIMATION CONTAINER -->
                         <div class="animation-container animation-fade-up" data-animation-delay="600">
                            
-                            <a href="#about" class="smooth-scroll">Learn More<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <a href="#about" class="smooth-scroll">Show More<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             
                         </div>
                         <!-- /ANIMATION CONTAINER -->
@@ -236,10 +239,25 @@
 
                     <h3 class="headline scroll-animated-from-right">Why you should hire me.</h3>
                     
-                    <p class="scroll-animated-from-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+                    <p class="scroll-animated-from-right">Extremely dedicated Game Developer with over a year of professional experience in the field. My foundations have been set with a proper degree in Computer Science. Proud team player on the job & a very annoying gamer on the night desk. I have tinkered with a few too many things to count, but have found Game Development to be my passion.</p>
 
-                    <p class="scroll-animated-from-right">Duis consectetur massa sit amet nibh rhoncus, at pharetra ligula aliquet. Ut ac velit vestibulum, eleifend diam ut, malesuada nisi. Sed vel felis vitae diam luctus commodo. Nunc ipsum est, vulputate id orci ac, luctus consectetur sapien.</p>
-
+                    <p class="scroll-animated-from-right">As a Computer Science graduate, I have a pretty strong grip on the following languages:</p>
+                    <ul class="services-list">
+                        <li aria-hidden="true" style="font-size: 18px"></i>C#</li> 
+                        <li aria-hidden="true" style="font-size: 18px"></i>C/C++</li> 
+                        <li aria-hidden="true" style="font-size: 18px"></i>MySQL/SQL/SQLite</li>
+                        <li aria-hidden="true" style="font-size: 18px"></i>JAVA</li>
+                        <li aria-hidden="true" style="font-size: 18px"></i>HTML/CSS/JavaScript</li> 
+                        </ul>
+                        <br>
+                        <p class="scroll-animated-from-right">As a Professional, I have a strong grip on the following tools:</p>
+                        <ul class="services-list">
+                        <li aria-hidden="true" style="font-size: 18px"></i>GitKraken/Github, Git, Unity Collab, SVN</li> 
+                        <li aria-hidden="true" style="font-size: 18px"></i>Unity</li> 
+                        <li aria-hidden="true" style="font-size: 18px"></i>Oculus SDK, SteamVR</li>
+                        <li aria-hidden="true" style="font-size: 18px"></i>Vuforia, ARCore, ARKit</li>
+                        <li aria-hidden="true" style="font-size: 18px"></i>Firebase</li> 
+                        </ul>
 
                 </section>
                 <!-- /ABOUT -->
@@ -259,8 +277,8 @@
                         <li class="scroll-animated-from-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Game Programming</li>
                         <li class="scroll-animated-from-right"><i class="fa fa-eye" aria-hidden="true"></i>Design Direction</li>
                         <li class="scroll-animated-from-right"><i class="fa fa-database" aria-hidden="true"></i>Game Design</li>
-                        <li class="scroll-animated-from-right"><i class="fa fa-television" aria-hidden="true"></i>Fancy Shmancy Stuff</li>
-                        <li class="scroll-animated-from-right"><i class="fa fa-square-o" aria-hidden="true"></i>Smexy Stuff</li>
+                        <li class="scroll-animated-from-right"><i class="fa fa-television" aria-hidden="true"></i>Bug Fixing</li>
+                        <li class="scroll-animated-from-right"><i class="fa fa-square-o" aria-hidden="true"></i>App Deployment</li>
                         
                         
                     </ul>
@@ -297,8 +315,8 @@
                                     <!-- CONTAINER MID -->
                                     <div class="container-mid">
 
-                                        <h5>Fashion Inc.</h5>
-                                        <p>Web Design</p>
+                                        <h5>Rawaan</h5>
+                                        <p>Mobile Application</p>
 
                                     </div>
                                     <!-- /CONTAINER MID -->
@@ -308,7 +326,7 @@
                                 <!-- /INFO -->
 
 
-                                <div class="background-image" style="background-image: url(assets/img/work/item-1.jpg)"></div>
+                                <div class="background-image" style="background-image: url(assets/img/work/rawaan.jpg)"></div>
 
                            
                             </a>
@@ -318,13 +336,20 @@
                             <!-- LIGHTBOX -->
                             <div id="item-1-lightbox" class="work-lightbox">
                                
-                               
-                                <img class="img-responsive" src="assets/img/work/item-1.jpg" alt="image">
+                                <iframe width="853" height="480" src="https://www.youtube.com/embed/U048teMWjl0" title="Rawaan - World's first Urdu Dyslexia Application" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 
-                                <h3>Fashion Inc.</h3>
-                                <p class="subline">Web Design</p>
+                                <h3>Rawaan</h3>
+                                <p class="subline"><u>World's first Urdu Dyslexia Application</u></p>
                                 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+                                <p>Rawaan is the first Urdu-based remedial therapy tool for dyslexia. Designed for primary school children, Rawaan delivers an immersive gaming experience that helps improve reading, writing and language skills. 
+                                
+                                With real-time adaptation, Rawaan presents an increasingly challenging environment, making learning an exciting journey. 
+                                
+                                Suitable for children who struggle with the Urdu language or use it as a second language, Rawaan is the perfect tool for building a strong foundation in Urdu literacy.
+                                
+                                <br> <br> You can check it out here: <br> <a style=color:#006eff ahref="https://play.google.com/store/apps/details?id=com.edsistive.rawaan">Rawaan | Dyslexia-Urdu Remedy</a>
+
+                                </p>
                                 
                                 
                             </div>
@@ -350,8 +375,8 @@
                                     <!-- CONTAINER MID -->
                                     <div class="container-mid">
 
-                                        <h5>Asimov 71</h5>
-                                        <p>Product Design</p>
+                                        <h5>DementiaVR</h5>
+                                        <p>Virtual Reality Application</p>
 
                                     </div>
                                     <!-- /CONTAINER MID -->
@@ -361,7 +386,7 @@
                                 <!-- /INFO -->
 
 
-                                <div class="background-image" style="background-image: url(assets/img/work/item-2.jpg)"></div>
+                                <div class="background-image" style="background-image: url(assets/img/work/bigBrain.gif)"></div>
 
                            
                             </a>
@@ -370,14 +395,12 @@
                             
                             <!-- LIGHTBOX -->
                             <div id="item-2-lightbox" class="work-lightbox">
-                               
-                               
-                                <img class="img-responsive" src="assets/img/work/item-2.jpg" alt="image">
+                                <iframe width="853" height="480" src="https://www.youtube.com/embed/t2qr4KAaD2c" title="DementiaVR | VR Application for Dementia Patients" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 
-                                <h3>Asimov 71</h3>
-                                <p class="subline">Product Design</p>
+                                <h3>DementiaVR</h3>
+                                <p class="subline"><u>Virtual Reality Application for Dementia patients</u></p>
                                 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+                                <p>DementiaVR is a project-under-construction that has been scientifically backed at helping patients suffering from Dementia. The application itself is a game that consists of multiple Virtual worlds; each containing beautiful levels and designs out of this world. <br>Since the project itself is still under construction & confidential, I am legally bound to not share much information about the project. <br> <br>I’ve shared a VR video with a small teaser with a few of the worlds that I’ve worked on. Of course, all of these were heavily revamped in the future, but those details cannot be shared. 1</p>
                                 
                                 
                             </div>
@@ -403,8 +426,8 @@
                                     <!-- CONTAINER MID -->
                                     <div class="container-mid">
 
-                                        <h5>Hardley &amp; Sons</h5>
-                                        <p>Design Direction</p>
+                                        <h5>Baadi</h5>
+                                        <p>Desi Hyper-Casual Game</p>
 
                                     </div>
                                     <!-- /CONTAINER MID -->
@@ -414,7 +437,7 @@
                                 <!-- /INFO -->
 
 
-                                <div class="background-image" style="background-image: url(assets/img/work/item-3.jpg)"></div>
+                                <div class="background-image" style="background-image: url(assets/img/work/baadi_generic_image.jpg)"></div>
 
                            
                             </a>
@@ -425,65 +448,14 @@
                             <div id="item-3-lightbox" class="work-lightbox">
                                
                                
-                                <img class="img-responsive" src="assets/img/work/item-3.jpg" alt="image">
+                                <iframe width="853" height="480" src="https://www.youtube.com/embed/5OlNGRBjtf0" title="Baadi gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 
-                                <h3>Hardley &amp; Sons</h3>
-                                <p class="subline">Design Direction</p>
+                                <h3>Baadi</h3>
+                                <p class="subline"><i>Desi Hyper-Casual Game</i></p>
                                 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
-                                
-                                
-                            </div>
-                            <!-- /LIGHTBOX -->
-                            
-                            
-                        </div>
-                        <!-- /ITEM -->
-                        
-                        
-                        <!-- ITEM -->
-                        <div class="item scroll-animated-from-right">
-                          
-                          
-                            <!-- LIGHTBOX LINK -->
-                            <a href="#" data-featherlight="#item-4-lightbox">
-                            
-                            
-                                <!-- INFO -->
-                                <div class="info">
-
-
-                                    <!-- CONTAINER MID -->
-                                    <div class="container-mid">
-
-                                        <h5>Starnation</h5>
-                                        <p>UI/UX DESIGN</p>
-
-                                    </div>
-                                    <!-- /CONTAINER MID -->
-
-
-                                </div>
-                                <!-- /INFO -->
-
-
-                                <div class="background-image" style="background-image: url(assets/img/work/item-4.jpg)"></div>
-
-                           
-                            </a>
-                            <!-- /LIGHTBOX LINK -->
-                            
-                            
-                            <!-- LIGHTBOX -->
-                            <div id="item-4-lightbox" class="work-lightbox">
-                               
-                               
-                                <img class="img-responsive" src="assets/img/work/item-4.jpg" alt="image">
-                                
-                                <h3>Starnation</h3>
-                                <p class="subline">UI/UX DESIGN</p>
-                                
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+                                <p>Working on my first GameJam when I knew at least a few things was weird and rough - but worth the lesson. I got acquainted with so many concepts like line-drawing, tweening & the use of fancy-dandy Artificial Intelligence in Unity. And then I realized that AI is just that: fancy dandy, and not a magic potion that could somehow make the game more fun. Anyways, the overall animation & coordination combined with extremely short deadlines made this game a blast to create. 
+                                    <br>Would love to recreate this some day but with my current or even future programming skills. 
+                                </p>
                                 
                                 
                             </div>
@@ -493,10 +465,6 @@
                         </div>
                         <!-- /ITEM -->
                         
-                        
-                    </div>
-                    <!-- /SHOWCASE -->
-
 
                 </section>
                 <!-- /WORK -->
@@ -519,29 +487,7 @@
                     <!-- /CONTACT LIST -->
                     
                     
-                    <!-- CONTACT FORM --> 
-                    <form id="contact-form" action="assets/php/contact.php" method="post">
-
-                       
-                        <input id="contact-form-name" type="text" name="name" class="form-control scroll-animated-from-right" placeholder="* Your Name">
-                        
-                        <input id="contact-form-email" type="text" name="email" class="form-control scroll-animated-from-right" placeholder="* Your Email">
-                        
-                        <!-- PHANTOM ELEMENT ( HONEYPOT CAPTCHA FOR SECURITY ) -->
-                        <div class="fhp-input"><input id="contact-form-company" type="text" name="company" class="form-control"></div>
-                        <!-- /PHANTOM ELEMENT ( HONEYPOT CAPTCHA FOR SECURITY ) -->
-                        
-                        <textarea id="contact-form-message" name="message" class="form-control scroll-animated-from-right" placeholder="* Your Message"></textarea>
-                        
-                        <button type="submit" class="form-control scroll-animated-from-right">Send Mail</button>
-                        
-                        <div class="success-message">* The Email was Sent Successfully!</div>
-
-                   
-                    </form>
-                    <!-- /CONTACT FORM --> 
-
-
+                  
                 </section>
                 <!-- /CONTACT -->
                 
@@ -552,19 +498,21 @@
                    
                     <!-- SOCIAL ICONS -->
                     <ul class="social-icons scroll-animated-from-right">
-                       
-                       
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/haider-zahoor-987720173/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                       <li> <a href="https://discord.com/users/124786023032029184"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                          </svg></li>
+                        <li><a href="https://twitter.com/raibatsu"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/Raibatsu"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        
+
                         
                         
                     </ul>
                     <!-- /SOCIAL ICONS -->
                     
 
-                    <p class="scroll-animated-from-right">© 2023 Raibatsu Co. | Design by <a href="https://templatefoundation.com">Template Foundation</a></p>
+                    <p class="scroll-animated-from-right">© 2023 Raibatsu Co. | Design shameless stolen from <a href="https://templatefoundation.com">Template Foundation</a></p>
 
 
                 </section>
