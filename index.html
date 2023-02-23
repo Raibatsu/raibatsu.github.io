@@ -79,18 +79,22 @@
                 }
                 var div = document.createElement('div');
                     div.innerHTML = msg;
-                    img = document.createElement('img');
-                    img.src = image;
+         
 
                 warningBanner.appendChild(div);
-                document.getElementById("unity-canvas").replaceChild(img);
-                if (type == 'error') div.style = 'background: red; padding: 10%;';
+                if(image != null)
+                {
+                    img = document.createElement('img');
+                    img.src = image;
+                    img.style = "width:50vh; height:101vh;"
+                    document.getElementById("unity-container").removeChild(document.getElementById("unity-container").childNodes[1]);
+                    document.getElementById("unity-container").appendChild(img);
+                    
+                } 
+                if (type == 'error') 
+                    div.style = 'background: red; padding: 10%;';
                 else {
                   if (type == 'warning') div.style = 'background: yellow; padding: 10%;';
-                  setTimeout(function() {
-                    warningBanner.removeChild(div);
-                    updateBannerVisibility();
-                  }, 5000);
                 }
                 updateBannerVisibility();
               }
@@ -113,7 +117,7 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices. <br> Please scroll down to see a static resume instead.', "./TemplateData/webgl-logo.png");
+        unityShowBanner('WebGL builds are not supported on mobile devices. <br> Please scroll down to see a static resume instead.', "./TemplateData/background_Image.gif");
         loadingScreen.style.display = "none";
       } else {
       loadingScreen.style.display = "block";
