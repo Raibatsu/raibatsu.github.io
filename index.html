@@ -13,9 +13,9 @@
         <!-- META -->
         <meta charset="utf-8">
         <meta name="robots" content="noodp">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-
+    
         <!-- PAGE TITLE -->
         <title>Haider's Resume - Pls hire me</title>
        
@@ -38,11 +38,11 @@
     </head>
 
    
-    <body>
+    <body id="body">
     
        
         <!-- PRELOADER -->
-        <div class="preloader">
+        <div id="preloader" class="preloader">
            
             <div class="spinner"></div>
             
@@ -197,13 +197,16 @@
                         <div class="animation-container animation-fade-up" data-animation-delay="600">
                         
                             <a href="#about" class="smooth-scroll">Show More<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <!-- 
+                             
                         <button id="theme-btn" class="smooth-scroll" onclick="
-                            this.classList.toggle('dark-mode');
-                            console.log(this.classList);
+                            document.getElementById('body').classList.toggle('dark-mode');
+                            if(innerHTML.indexOf('Light Mode') != -1)
+                            this.innerHTML = 'Dark Mode | <i class=\'fa fa-moon dark-mode\'; aria-hidden=\'true\'></i>';
+                            else
+                            this.innerHTML = 'Light Mode | <i class=\'fa fa-sun dark-mode\'; aria-hidden=\'true\'></i>';
                             "
-                            > Dark Theme<i class="fa  fa-moon dark-mode" aria-hidden="true"></i></button>
-                            --> 
+                            >Light Mode | <i class="fa fa-sun dark-mode" aria-hidden="true"></i></button>
+                             
                         </div>
                         <!-- /ANIMATION CONTAINER -->
 
