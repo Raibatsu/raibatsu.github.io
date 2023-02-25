@@ -23,7 +23,14 @@
 
 /** 1. Basic
 *******************************************************************/
-
+:root{
+ --light-color: white;
+ --dark-color: black;
+}
+.dark-mode{
+    --light-color: black;
+    --dark-color: white; 
+}
 html
 {
     font-size: 10px;
@@ -34,9 +41,8 @@ body
     font-family: 'Comfortaa', cursive;
     font-weight: 300;
     font-style: normal;
-
-    color: #000;
-    background: #fff;
+    color: var(--dark-color);
+    background: var(--light-color);
 
     -webkit-font-smoothing: antialiased;
 }
@@ -53,7 +59,7 @@ h6
 
     letter-spacing: .05em;
 
-    color: #000;;
+    color: var(--dark-color);
 }
 
 h1
@@ -104,7 +110,7 @@ a:focus
 
 a:hover
 {
-    color: #111;
+    color: var(--dark-color);
 }
 
 @media (max-width:600px)
@@ -140,7 +146,7 @@ a:hover
     width: 100%;
     height: 100%;
 
-    background: #fff;
+    background: var(--light-color);
 }
 
 .preloader.hide-preloader
@@ -171,7 +177,7 @@ a:hover
 
     opacity: 1;
     border-radius: 100%;
-    background-color: #111;
+    background-color: var(--dark-color);
 }
 
 .preloader.hide-preloader .spinner
@@ -375,7 +381,7 @@ a:hover
          -o-transition: .2s ease;
             transition: .2s ease;
 
-    color: #fff;
+    color: var(--light-color);
     border-radius: 100px;
     background: none;
 }
@@ -393,7 +399,7 @@ a:hover
     content: '';
 
     border-radius: 100px;
-    background: #111;
+    background: var(--dark-color);
 }
 
 #intro .container-mid a:after
@@ -420,6 +426,10 @@ a:hover
     
 }
 
+.sprinkle p:hover
+{
+
+}
 #intro .container-mid a i
 {
     font-size: .85em;
@@ -583,9 +593,9 @@ a:hover
 
     text-align: center;
 
-    color: #fff;
+    color: var(--light-color);
     border-radius: 100px;
-    background: #111;
+    background: var(--dark-color);
 }
 
 
@@ -607,7 +617,7 @@ a:hover
     cursor: pointer;
 
     border-radius: 3rem;
-    background: #111;
+    background: var(--dark-color);
 }
 
 #work .showcase .item:last-child
@@ -629,7 +639,7 @@ a:hover
          -o-transition: .25s ease;
             transition: .25s ease;
 
-    color: #fff;
+    color: var(--light-color);
     background: #008aff;
 }
 
@@ -659,7 +669,7 @@ a:hover
             transform: translateX(4vh);
 
     opacity: 0;
-    color: #fff;
+    color: var(--light-color);
 }
 
 #work .showcase .item:hover .info .container-mid h5
@@ -714,7 +724,7 @@ a:hover
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
 
-    background: #fff;
+    background: var(--light-color);
 }
 
 #work .showcase .item .background-image
@@ -754,9 +764,10 @@ a:hover
 
 .featherlight .featherlight-content .work-lightbox
 {
-    max-width: 50vw;
-    border-radius: 2%; background-color: white;
-    border: 3px solid #000; 
+    max-width: 95vw;
+    max-height: 90vh;
+    border-radius: 3%; background-color: var(--light-color);
+    border: 3px solid var(--dark-color); 
     overflow: hidden;
     padding: 6vh;
 
@@ -839,11 +850,11 @@ a:hover
          -o-transition: .4s ease;
             transition: .4s ease;
 
-    color: #fff;
+    color: var(--light-color);
     border: none !important;
     border-radius: 34px;
     outline: none !important;
-    background: #111;
+    background: var(--dark-color);
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
 }
@@ -864,19 +875,19 @@ a:hover
 #contact #contact-form input::-webkit-input-placeholder,
 #contact #contact-form textarea::-webkit-input-placeholder
 {
-    color: #fff;
+    color: var(--light-color);
 }
 
 #contact #contact-form input:-ms-input-placeholder,
 #contact #contact-form textarea:-ms-input-placeholder
 {
-    color: #fff;
+    color: var(--light-color);
 }
 
 #contact #contact-form input::placeholder,
 #contact #contact-form textarea::placeholder
 {
-    color: #fff; /* this is email*/ 
+    color: var(--light-color); /* this is email*/ 
 }
 
 #contact #contact-form input.error,
@@ -934,7 +945,7 @@ a:hover
     content: '';
 
     border-radius: 100px;
-    background: #111;
+    background: var(--dark-color);
 }
 
 #contact #contact-form button:after
@@ -979,7 +990,7 @@ a:hover
     pointer-events: none;
 
     opacity: 0;
-    color: #fff;
+    color: var(--light-color);
     border-radius: 3em;
     background: limegreen;
 }
@@ -1024,7 +1035,7 @@ a:hover
 
     text-align: center;
 
-    color: #fff;
+    color: var(--light-color);
     border-radius: 100%;
     background: none;
 }
@@ -1042,7 +1053,7 @@ a:hover
     content: '';
 
     border-radius: 100px;
-    background: #111;
+    background: var(--dark-color);
 }
 
 #footer .social-icons li:after
@@ -1074,7 +1085,7 @@ a:hover
 
     display: block;
 
-    color: #fff;
+    color: var(--light-color);
     border: none;
 }
 
@@ -1085,6 +1096,6 @@ a:hover
 
 #footer p a
 {
-    color: #000;
-    border-bottom: 1px solid #111;
+    color: var(--dark-color);
+    border-bottom: 1px solid var(--dark-color);
 }

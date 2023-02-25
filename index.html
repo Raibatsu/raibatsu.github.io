@@ -9,12 +9,13 @@
                     padding-right: 5%;
             }
     </style>
-       <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+       
         <!-- META -->
         <meta charset="utf-8">
         <meta name="robots" content="noodp">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-       
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
         <!-- PAGE TITLE -->
         <title>Haider's Resume - Pls hire me</title>
        
@@ -46,8 +47,6 @@
             <div class="spinner"></div>
             
         </div>
-        <!-- /PRELOADER -->
-    
         
         <!-- IMAGE CONTAINER -->
         <div class="image-container">
@@ -72,13 +71,6 @@
               var loadingScreen = document.querySelector("#unity-custom-loading-screen");
               var customLoadingBar = document.querySelector("#custom-loader");
               var warningBanner = document.querySelector("#unity-warning");
-        
-              // Shows a temporary message banner/ribbon for a few seconds, or
-              // a permanent error message on top of the canvas if type=='error'.
-              // If type=='warning', a yellow highlight color is used.
-              // Modify or remove this function to customize the visually presented
-              // way that non-critical warnings and error messages are presented to the
-              // user.
               function unityShowBanner(msg, image, type) {
                 function updateBannerVisibility() {
                   warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
@@ -120,8 +112,6 @@
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
-        // Avoid draining fillrate performance on mobile devices,
-        // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices. <br> Please scroll down to see a static resume instead.', "./TemplateData/background_Image.gif");
         loadingScreen.style.display = "none";
@@ -144,7 +134,6 @@
       };
       document.body.appendChild(script);
 
-      // value - 0 to 1
       function unitySetLoaderProgressTo(value)
       {
         const fill = customLoadingBar.getElementsByClassName("fill")[0];
@@ -159,21 +148,9 @@
             fill: "forwards"
           }
         );
-
+    
         fillText.textContent = (value * 100).toFixed() + "%";
         }
-   /*  createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/WebGL.data.unityweb",
-        frameworkUrl: "Build/WebGL.framework.js.unityweb",
-        codeUrl: "Build/WebGL.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "Raibatsu Co.",
-        productName: "Resume",
-        productVersion: "1.0",
-        
-       // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });}*/
     }
     </script>
 
@@ -182,7 +159,7 @@
 
 
         <!-- CONTENT AREA -->
-        <div class="content-area">
+        <div id="example-area" class="content-area">
 
 
             <!-- CONTENT AREA INNER --> 
@@ -218,9 +195,15 @@
                         
                         <!-- ANIMATION CONTAINER -->
                         <div class="animation-container animation-fade-up" data-animation-delay="600">
-                           
+                        
                             <a href="#about" class="smooth-scroll">Show More<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            
+                            <!-- 
+                        <button id="theme-btn" class="smooth-scroll" onclick="
+                            this.classList.toggle('dark-mode');
+                            console.log(this.classList);
+                            "
+                            > Dark Theme<i class="fa  fa-moon dark-mode" aria-hidden="true"></i></button>
+                            --> 
                         </div>
                         <!-- /ANIMATION CONTAINER -->
 
