@@ -52,7 +52,7 @@
         <div class="image-container">
             
             <div id="unity-container" class="unity-desktop">
-                <canvas id="unity-canvas" width=window.innerWidth height=window.innerHeight style="width: 48vw; height: 99vh; border-radius: 3%; background-color: white;
+                <canvas id="unity-canvas" width=window.innerWidth height=window.innerHeight style="width: 48vw; border-radius: 3%; background-color: white;
                         border: 2px solid #000; overflow: hidden;"></canvas>
             <div id="unity-custom-loading-screen">
                 
@@ -65,12 +65,13 @@
               <div id="unity-warning"> </div>
               </div>
             </div>
-            <script>
+            <script id="unity">
               var container = document.querySelector("#unity-container");
               var canvas = document.querySelector("#unity-canvas");
               var loadingScreen = document.querySelector("#unity-custom-loading-screen");
               var customLoadingBar = document.querySelector("#custom-loader");
               var warningBanner = document.querySelector("#unity-warning");
+              var unityInstance = null;
               function unityShowBanner(msg, image, type) {
                 function updateBannerVisibility() {
                   warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
@@ -119,15 +120,14 @@
       loadingScreen.style.display = "block";
       var script = document.createElement("script");
       script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
+      window.onload = () => {
+        unityInstance = createUnityInstance(canvas, config, (progress) => {
           unitySetLoaderProgressTo(progress);
         }).then((unityInstance) => {
           loadingScreen.style.display = "none";
-          
-         /* fullscreenButton.onclick = () => {
+          document.getElementById("unity-fullscreen-button").onclick= () => {
             unityInstance.SetFullscreen(1);
-          };*/
+          };
         }).catch((message) => {
           alert(message);
         });
@@ -206,7 +206,7 @@
                             this.innerHTML = 'Light Mode | <i class=\'fa fa-sun dark-mode\'; aria-hidden=\'true\'></i>';
                             "
                             >Light Mode | <i class="fa fa-sun dark-mode" aria-hidden="true"></i></button>
-                             
+                            <button id="unity-fullscreen-button" class="smooth-scroll">Full Screen | <i class="fa fa-mobile" aria-hidden="true"></i></button>
                         </div>
                         <!-- /ANIMATION CONTAINER -->
 
