@@ -52,10 +52,9 @@
         <div class="image-container">
             
             <div id="unity-container" class="unity-desktop">
-                <canvas id="unity-canvas" width=window.innerWidth height=window.innerHeight style="width: 48vw; border-radius: 3%; background-color: white;
-                        border: 2px solid #000; overflow: hidden;"></canvas>
-            <div id="unity-custom-loading-screen">
-                
+                <canvas id="unity-canvas" style="width: 45vw; height:80vh; border-radius: 3%; background-color: white;
+                        border: 2px solid #000; overflow: hidden;"> </canvas>
+                <div id="unity-custom-loading-screen" style=" ">
                 <div id="custom-logo", class="rotate"></div>
                 <div id="custom-loader">
                   <div class="fill"></div>
@@ -95,7 +94,10 @@
                 else {
                   if (type == 'warning') div.style = 'background: yellow; padding: 10%;';
                 }
-                updateBannerVisibility();
+                setTimeout(function() {
+            warningBanner.removeChild(div);
+                   updateBannerVisibility();
+          }, 5000);
               }
         
               var buildUrl = "Build";
@@ -111,12 +113,13 @@
               };
         
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) 
+      {
         container.className = "unity-mobile";
+        canvas.style = "width: 100vw; height: 80vh";
         config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices. <br> Please scroll down to see a static resume instead.', "./TemplateData/background_Image.gif");
-        loadingScreen.style.display = "none";
-      } else {
+        unityShowBanner('Mobile view is not officially supported. <br> Please scroll down and play the game in full screen for the best experience.');
+      } 
       loadingScreen.style.display = "block";
       var script = document.createElement("script");
       script.src = loaderUrl;
@@ -125,8 +128,9 @@
           unitySetLoaderProgressTo(progress);
         }).then((unityInstance) => {
           loadingScreen.style.display = "none";
+          document.getElementById("unity-fullscreen-button").style.display = "block"; // only show the full screen button once the game has been loaded.
           document.getElementById("unity-fullscreen-button").onclick= () => {
-            unityInstance.SetFullscreen(1);
+            unityInstance.SetFullscreen(1); 
           };
         }).catch((message) => {
           alert(message);
@@ -151,7 +155,7 @@
     
         fillText.textContent = (value * 100).toFixed() + "%";
         }
-    }
+    
     </script>
 
         </div>
@@ -206,7 +210,7 @@
                             this.innerHTML = 'Light Mode | <i class=\'fa fa-sun dark-mode\'; aria-hidden=\'true\'></i>';
                             "
                             >Light Mode | <i class="fa fa-sun dark-mode" aria-hidden="true"></i></button>
-                            <button id="unity-fullscreen-button" class="smooth-scroll">Full Screen | <i class="fa fa-mobile" aria-hidden="true"></i></button>
+                            <button style="display: none" id="unity-fullscreen-button" class="smooth-scroll">Full Screen | <i class="fa fa-mobile" aria-hidden="true"></i></button>
                         </div>
                         <!-- /ANIMATION CONTAINER -->
 

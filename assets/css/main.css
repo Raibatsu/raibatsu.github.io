@@ -268,7 +268,14 @@ a:hover
     }
 }
 
-
+@media (max-height: 960px)
+{
+    .unity-container
+    {
+        width: 48vw;
+        height: 98vh;
+    }
+}
 
 /** 4. Content Area
 *******************************************************************/
