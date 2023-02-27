@@ -52,9 +52,9 @@
         <div class="image-container">
             
             <div id="unity-container" class="unity-desktop">
-                <canvas id="unity-canvas" style="width: 45vw; height:80vh; border-radius: 3%; background-color: white;
+                <canvas id="unity-canvas" style="width: 45vw; height:80vh; border-radius: 3%; background-color: rgba(0, 0, 0, 0);
                         border: 2px solid #000; overflow: hidden;"> </canvas>
-                <div id="unity-custom-loading-screen" style=" ">
+                <div id="unity-custom-loading-screen">
                 <div id="custom-logo", class="rotate"></div>
                 <div id="custom-loader">
                   <div class="fill"></div>
@@ -130,7 +130,8 @@
           loadingScreen.style.display = "none";
           document.getElementById("unity-fullscreen-button").style.display = "block"; // only show the full screen button once the game has been loaded.
           document.getElementById("unity-fullscreen-button").onclick= () => {
-            unityInstance.SetFullscreen(1); 
+            unityInstance.SetFullscreen(1);
+             
           };
         }).catch((message) => {
           alert(message);
