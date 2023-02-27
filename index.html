@@ -113,10 +113,16 @@
               };
         
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) 
+      if (/Android/i.test(navigator.userAgent)) 
       {
         container.className = "unity-mobile";
         canvas.style = "width: 100vw; height: 80vh";
+        config.devicePixelRatio = 1;
+        unityShowBanner('Mobile view is not officially supported. <br> Please scroll down and play the game in full screen for the best experience.');
+      }else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
+      {
+        container.className = "unity-mobile";
+        canvas.style = "width: 100vw; height: 92vh";
         config.devicePixelRatio = 1;
         unityShowBanner('Mobile view is not officially supported. <br> Please scroll down and play the game in full screen for the best experience.');
       } 
@@ -128,11 +134,13 @@
           unitySetLoaderProgressTo(progress);
         }).then((unityInstance) => {
           loadingScreen.style.display = "none";
+          if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) {} 
+          else{
           document.getElementById("unity-fullscreen-button").style.display = "block"; // only show the full screen button once the game has been loaded.
           document.getElementById("unity-fullscreen-button").onclick= () => {
             unityInstance.SetFullscreen(1);
              
-          };
+          }};
         }).catch((message) => {
           alert(message);
         });
