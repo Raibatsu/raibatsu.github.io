@@ -450,6 +450,7 @@ a:hover
             transition: .2s ease;
 
     color: var(--light-color);
+    border: none;
     border-radius: 100px;
     background: none;
 }
@@ -862,6 +863,7 @@ a:hover
 
 #contact .contact-list
 {
+    margin-top: 5em;
     margin-bottom: 3.4em;
     padding: 0;
 
