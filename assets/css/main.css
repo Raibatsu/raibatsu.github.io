@@ -437,21 +437,15 @@ a:hover
 {
     font-size: 2.4rem;
     line-height: 2.92em;
-
-    position: relative;
-
+    position: absolute;
     display: inline-block;
     overflow: hidden;
-
     padding: 0 2.6em;
-
     -webkit-transition: .2s ease;
-         -o-transition: .2s ease;
-            transition: .2s ease;
-
+    -o-transition: .2s ease;
+    transition: .2s ease;
     color: var(--light-color);
     border: none;
-    border-radius: 100px;
     background: none;
 }
 

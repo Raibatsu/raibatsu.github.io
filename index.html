@@ -122,7 +122,7 @@
       }else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
       {
         container.className = "unity-mobile";
-        canvas.style = "width: 100vw; height: 92vh";
+        canvas.style = "width: 100vw; height: 80vh";
         config.devicePixelRatio = 1;
         unityShowBanner('Mobile view is not officially supported. <br> Please scroll down and play the game in full screen for the best experience.');
       } 
@@ -132,6 +132,9 @@
       window.onload = () => {
         unityInstance = createUnityInstance(canvas, config, (progress) => {
           unitySetLoaderProgressTo(progress);
+          var unityFullscreenButton = document.getElementById("unity-fullscreen-button"); 
+          unityFullscreenButton.style.display = "none"; 
+        
         }).then((unityInstance) => {
           loadingScreen.style.display = "none";
           if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) {} 
